@@ -29,6 +29,7 @@ Post.init(
         },
         user_id: {
             type: DataTypes.INTEGER,
+            allowNull: false,
             references: {
                 model: 'user',
                 key: 'id'
@@ -41,4 +42,7 @@ Post.init(
         underscored: true,
         modelName: 'post'
     }
-)
+);
+
+//EXPORT MODEL ---------------------------
+module.exports = Post;
